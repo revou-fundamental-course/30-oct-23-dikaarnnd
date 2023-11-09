@@ -4,23 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
-    <link rel="stylesheet" href="css/style.css"
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/index.js"></script>
 </head>
 <body>
     <header id="header-bar">
-        <h3 id="logo">KaBMI</h3>
-        <nav class="navigation-bar">
-            <a href="">Download App</a>
-            <a href="">Contact Us</a>
-        </nav>
+        <h2 id="logo">Kalkulator BMI</h2>
     </header>
+    <p>
+        Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang
+        penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? 
+        Yuk, hitung sekarang di kalkulator BMI.
+    </p>
     <section class="input-section">
-        <label>Berat Badan</label>
-        <input type="number" id="weight-input" placeholder="0">
+        <ul>
+            <li><input type="radio" name="gender" id="male"><label for="male">Laki-laki</label></br></li>  
+            <li><input type="radio" name="gender" id="female"><label for="female">Perempuan</label></li>
+        </ul>
+
+        <label>Berat Badan (kg)</label>
+        <input type="number" id="beratBadan" placeholder="0">
+
+        <label>Usia (tahun)</label>
+        <input type="number" id="usia" placeholder="0">
+
+        <label>Tinggi Badan (cm)</label>
+        <input type="number" id="tinggiBadan" placeholder="0">
+
         <section class="button-section">
-            <button>Hitung BMI</button>
-            <button>Reset</button>
+            <button class="button-1", onclick="hitungBMI()">Hitung BMI</button>
+            <button class="button-2", onclick="resetForm()">Reset</button>
         </section>
     </section>
+    <div id="hasil"></div>
 </body>
 </html>
